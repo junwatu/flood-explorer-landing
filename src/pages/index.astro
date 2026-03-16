@@ -1,0 +1,210 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const releaseUrl = 'https://github.com/junwatu/indonesian-flood-explorer/releases/tag/v0.1.0';
+---
+
+<Layout title="Indonesian Flood Explorer">
+  <!-- Nav -->
+  <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-sm border-b border-neutral-200">
+    <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
+      <span class="text-sm font-mono font-medium tracking-tight text-neutral-900">flood-explorer</span>
+      <a href={releaseUrl} class="text-xs font-mono bg-neutral-900 text-white px-4 py-1.5 hover:bg-neutral-700 transition-colors">
+        Download v0.1.0
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="pt-28 pb-12 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="max-w-3xl">
+        <p class="font-mono text-xs text-neutral-500 uppercase tracking-widest mb-4">v0.1.0 / Desktop App</p>
+        <h1 class="text-4xl md:text-5xl font-bold text-neutral-900 leading-[1.1] mb-6 tracking-tight">
+          Indonesian<br />Flood Explorer
+        </h1>
+        <p class="text-lg text-neutral-600 leading-relaxed mb-8 max-w-xl">
+          Explore, filter, and analyze 310,000+ historical flood events across Indonesia.
+          Offline-first. Powered by DuckDB and MapLibre.
+        </p>
+        <div class="flex items-center gap-4">
+          <a
+            href={releaseUrl}
+            class="inline-flex items-center gap-2 bg-neutral-900 text-white px-6 py-3 text-sm font-medium hover:bg-neutral-700 transition-colors"
+          >
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            macOS (Apple Silicon)
+          </a>
+          <span class="inline-flex items-center gap-2 text-neutral-400 px-6 py-3 text-sm font-medium border border-neutral-200 cursor-default">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
+            </svg>
+            Windows
+            <span class="text-[10px] text-neutral-400 font-mono">SOON</span>
+          </span>
+        </div>
+        <p class="font-mono text-[11px] text-neutral-500 mt-3">165 MB &middot; unsigned &middot; right-click &rarr; open on first launch</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshot -->
+  <section class="px-6 pb-20">
+    <div class="max-w-6xl mx-auto">
+      <img
+        src="/sc-app.png"
+        alt="Indonesian Flood Explorer app interface"
+        class="w-full block"
+        loading="eager"
+      />
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="max-w-6xl mx-auto px-6"><hr class="border-neutral-200" /></div>
+
+  <!-- Features -->
+  <section class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <p class="font-mono text-xs text-neutral-500 uppercase tracking-widest mb-10">Capabilities</p>
+      <div class="grid md:grid-cols-3 gap-px bg-neutral-200">
+        <div class="bg-white p-8">
+          <p class="font-mono text-xs text-neutral-500 mb-4">01</p>
+          <h3 class="text-base font-semibold text-neutral-900 mb-3">Offline-First</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed">
+            Flood data stored in Parquet files, queried with embedded DuckDB. No internet needed for core analysis.
+          </p>
+        </div>
+        <div class="bg-white p-8">
+          <p class="font-mono text-xs text-neutral-500 mb-4">02</p>
+          <h3 class="text-base font-semibold text-neutral-900 mb-3">Interactive Maps</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed">
+            MapLibre GL JS with CartoDB Voyager online and Protomaps PMTiles vector tiles for full offline map rendering.
+          </p>
+        </div>
+        <div class="bg-white p-8">
+          <p class="font-mono text-xs text-neutral-500 mb-4">03</p>
+          <h3 class="text-base font-semibold text-neutral-900 mb-3">Smart Filtering</h3>
+          <p class="text-sm text-neutral-600 leading-relaxed">
+            Search any province or district, filter by year, get real-time stats on events, areas, and date ranges.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Views -->
+  <section class="pb-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <p class="font-mono text-xs text-neutral-500 uppercase tracking-widest mb-10">Visualization Modes</p>
+      <div class="grid md:grid-cols-2 gap-px bg-neutral-200 border border-neutral-200">
+        <div class="bg-white p-8">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-3 h-3 rounded-full bg-teal-700"></div>
+            <h3 class="text-base font-semibold text-neutral-900">Centroid</h3>
+          </div>
+          <p class="text-sm text-neutral-600 leading-relaxed mb-5">
+            Flood events as sized point markers. Scales with area. Up to 1,200 concurrent markers with configurable sizing.
+          </p>
+          <div class="flex gap-2 flex-wrap">
+            <span class="font-mono text-[10px] text-neutral-500 border border-neutral-200 px-2 py-0.5">fast</span>
+            <span class="font-mono text-[10px] text-neutral-500 border border-neutral-200 px-2 py-0.5">scalable</span>
+            <span class="font-mono text-[10px] text-neutral-500 border border-neutral-200 px-2 py-0.5">configurable</span>
+          </div>
+        </div>
+        <div class="bg-white p-8">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-3 h-3 bg-orange-500"></div>
+            <h3 class="text-base font-semibold text-neutral-900">Polygon</h3>
+          </div>
+          <p class="text-sm text-neutral-600 leading-relaxed mb-5">
+            True flood boundary polygons rendered as filled shapes. Lazy-loaded on demand. Shows actual extent in km&sup2;.
+          </p>
+          <div class="flex gap-2 flex-wrap">
+            <span class="font-mono text-[10px] text-neutral-500 border border-neutral-200 px-2 py-0.5">boundaries</span>
+            <span class="font-mono text-[10px] text-neutral-500 border border-neutral-200 px-2 py-0.5">lazy-loaded</span>
+            <span class="font-mono text-[10px] text-neutral-500 border border-neutral-200 px-2 py-0.5">area</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Modes -->
+  <section class="pb-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <p class="font-mono text-xs text-neutral-500 uppercase tracking-widest mb-10">Map Sources</p>
+      <div class="grid md:grid-cols-3 gap-px bg-neutral-200 border border-neutral-200">
+        <div class="bg-white p-6">
+          <p class="font-mono text-[10px] text-neutral-500 uppercase tracking-wider mb-3">Auto</p>
+          <p class="text-sm text-neutral-600">Starts offline, upgrades to online tiles when connected.</p>
+        </div>
+        <div class="bg-white p-6">
+          <p class="font-mono text-[10px] text-neutral-500 uppercase tracking-wider mb-3">Online</p>
+          <p class="text-sm text-neutral-600">CartoDB Voyager @2x raster tiles with full detail.</p>
+        </div>
+        <div class="bg-white p-6">
+          <p class="font-mono text-[10px] text-neutral-500 uppercase tracking-wider mb-3">Offline</p>
+          <p class="text-sm text-neutral-600">39 MB PMTiles. Indonesia coverage, zoom 0&ndash;10.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Divider -->
+  <div class="max-w-6xl mx-auto px-6"><hr class="border-neutral-200" /></div>
+
+  <!-- Tech Stack -->
+  <section class="py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <p class="font-mono text-xs text-neutral-500 uppercase tracking-widest mb-8">Stack</p>
+      <div class="flex flex-wrap gap-3">
+        {['Tauri v2', 'SvelteKit', 'DuckDB', 'MapLibre GL', 'Protomaps', 'Rust'].map((t) => (
+          <span class="font-mono text-xs text-neutral-600 border border-neutral-300 px-4 py-2 hover:border-neutral-900 hover:text-neutral-900 transition-colors">
+            {t}
+          </span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Download CTA -->
+  <section class="pb-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="border border-neutral-900 p-10 md:p-16">
+        <div class="max-w-xl">
+          <h2 class="text-2xl font-bold text-neutral-900 mb-4 tracking-tight">Download</h2>
+          <p class="text-sm text-neutral-600 mb-8 leading-relaxed">
+            Start analyzing flood events across Indonesia. 310,000+ events, fully offline, no account required.
+          </p>
+          <div class="flex flex-col sm:flex-row items-start gap-4">
+            <a
+              href={releaseUrl}
+              class="inline-flex items-center gap-2 bg-neutral-900 text-white px-6 py-3 text-sm font-medium hover:bg-neutral-700 transition-colors"
+            >
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+              macOS (Apple Silicon)
+            </a>
+            <span class="inline-flex items-center gap-2 text-neutral-400 px-6 py-3 text-sm font-medium border border-neutral-200 cursor-default">
+              Windows
+              <span class="font-mono text-[10px]">SOON</span>
+            </span>
+          </div>
+          <p class="font-mono text-[11px] text-neutral-500 mt-4">165 MB &middot; aarch64 &middot; unsigned</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-neutral-200 py-8 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <span class="font-mono text-xs text-neutral-500">flood-explorer v0.1.0</span>
+      <span class="font-mono text-[10px] text-neutral-500">Data: Groundsource &middot; Map: OpenStreetMap</span>
+    </div>
+  </footer>
+</Layout>
