@@ -4,16 +4,36 @@ interface Props {
   description?: string;
 }
 
-const { title, description = 'Desktop geospatial explorer for Indonesia flood events. Offline-first with interactive maps, smart filtering, and DuckDB-powered analytics.' } = Astro.props;
+const { title, description = 'Jelajahi, filter, dan analisis 310.000+ kejadian banjir historis di seluruh Indonesia. Aplikasi desktop offline-first dengan peta interaktif, DuckDB, dan MapLibre.' } = Astro.props;
+const ogImage = 'https://indonesian-flood-explorer.pages.dev/sc-app-l.jpeg';
+const siteUrl = 'https://indonesian-flood-explorer.pages.dev';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
     <meta name="theme-color" content="#171717" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={siteUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="2880" />
+    <meta property="og:image:height" content="1652" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:site_name" content="Penjelajah Banjir Indonesia" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

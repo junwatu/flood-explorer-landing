@@ -1,16 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const releaseUrl = 'https://github.com/junwatu/indonesian-flood-explorer/releases/tag/v0.1.0';
+const releaseUrl = 'https://banjir.kaleng.my.id/Indonesian.Flood.Explorer_0.1.0_aarch64.dmg';
 ---
 
-<Layout title="Indonesian Flood Explorer">
+<Layout title="Penjelajah Banjir Indonesia — Aplikasi Desktop">
   <!-- Nav -->
   <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-sm border-b border-neutral-200">
     <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
-      <span class="text-sm font-mono font-medium tracking-tight text-neutral-900">flood-explorer</span>
+      <span class="text-sm font-mono font-medium tracking-tight text-neutral-900">penjelajah-banjir</span>
       <a href={releaseUrl} class="text-xs font-mono bg-neutral-900 text-white px-4 py-1.5 hover:bg-neutral-700 transition-colors">
-        Download v0.1.0
+        Unduh v0.1.0
       </a>
     </div>
   </nav>
@@ -19,13 +19,13 @@ const releaseUrl = 'https://github.com/junwatu/indonesian-flood-explorer/release
   <section class="pt-28 pb-12 px-6">
     <div class="max-w-6xl mx-auto">
       <div class="max-w-3xl">
-        <p class="font-mono text-xs text-neutral-500 uppercase tracking-widest mb-4">v0.1.0 / Desktop App</p>
+        <p class="font-mono text-xs text-neutral-500 uppercase tracking-widest mb-4">v0.1.0 / Aplikasi Desktop</p>
         <h1 class="text-4xl md:text-5xl font-bold text-neutral-900 leading-[1.1] mb-6 tracking-tight">
-          Indonesian<br />Flood Explorer
+          Penjelajah Banjir<br />Indonesia
         </h1>
         <p class="text-lg text-neutral-600 leading-relaxed mb-8 max-w-xl">
-          Explore, filter, and analyze 310,000+ historical flood events across Indonesia.
-          Offline-first. Powered by DuckDB and MapLibre.
+          Jelajahi, filter, dan analisis 310.000+ kejadian banjir historis di seluruh Indonesia.
+          Bisa offline. Didukung DuckDB dan MapLibre.
         </p>
         <div class="flex items-center gap-4">
           <a
@@ -42,10 +42,10 @@ const releaseUrl = 'https://github.com/junwatu/indonesian-flood-explorer/release
               <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/>
             </svg>
             Windows
-            <span class="text-[10px] text-neutral-400 font-mono">SOON</span>
+            <span class="text-[10px] text-neutral-400 font-mono">SEGERA</span>
           </span>
         </div>
-        <p class="font-mono text-[11px] text-neutral-500 mt-3">165 MB &middot; unsigned &middot; right-click &rarr; open on first launch</p>
+        <p class="font-mono text-[11px] text-neutral-500 mt-3">165 MB &middot; unsigned &middot; klik kanan &rarr; buka saat pertama kali</p>
       </div>
     </div>
   </section>
@@ -55,7 +55,7 @@ const releaseUrl = 'https://github.com/junwatu/indonesian-flood-explorer/release
     <div class="max-w-6xl mx-auto">
       <img
         src="/sc-app.png"
-        alt="Indonesian Flood Explorer app interface"
+        alt="Tampilan aplikasi Penjelajah Banjir Indonesia"
         class="w-full block"
         loading="eager"
       />
@@ -68,27 +68,27 @@ const releaseUrl = 'https://github.com/junwatu/indonesian-flood-explorer/release
   <!-- Features -->
   <section class="py-20 px-6">
     <div class="max-w-6xl mx-auto">
-      <p class="font-mono text-xs text-neutral-500 uppercase tracking-widest mb-10">Capabilities</p>
+      <p class="font-mono text-xs text-neutral-500 uppercase tracking-widest mb-10">Fitur Utama</p>
       <div class="grid md:grid-cols-3 gap-px bg-neutral-200">
         <div class="bg-white p-8">
           <p class="font-mono text-xs text-neutral-500 mb-4">01</p>
           <h3 class="text-base font-semibold text-neutral-900 mb-3">Offline-First</h3>
           <p class="text-sm text-neutral-600 leading-relaxed">
-            Flood data stored in Parquet files, queried with embedded DuckDB. No internet needed for core analysis.
+            Data banjir tersimpan dalam file Parquet, diproses dengan DuckDB embedded. Tidak perlu internet untuk analisis utama.
           </p>
         </div>
         <div class="bg-white p-8">
           <p class="font-mono text-xs text-neutral-500 mb-4">02</p>
-          <h3 class="text-base font-semibold text-neutral-900 mb-3">Interactive Maps</h3>
+          <h3 class="text-base font-semibold text-neutral-900 mb-3">Peta Interaktif</h3>
           <p class="text-sm text-neutral-600 leading-relaxed">
-            MapLibre GL JS with CartoDB Voyager online and Protomaps PMTiles vector tiles for full offline map rendering.
+            MapLibre GL JS dengan CartoDB Voyager (online) dan Protomaps PMTiles (offline) untuk rendering peta penuh tanpa koneksi.
           </p>
         </div>
         <div class="bg-white p-8">
           <p class="font-mono text-xs text-neutral-500 mb-4">03</p>
-          <h3 class="text-base font-semibold text-neutral-900 mb-3">Smart Filtering</h3>
+          <h3 class="text-base font-semibold text-neutral-900 mb-3">Filter Cerdas</h3>
           <p class="text-sm text-neutral-600 leading-relaxed">
-            Search any province or district, filter by year, get real-time stats on events, areas, and date ranges.
+            Cari provinsi atau kabupaten, filter berdasarkan tahun, dan dapatkan statistik real-time tentang kejadian, luas area, dan rentang waktu.
           </p>
         </div>
       </div>
@@ -98,7 +98,7 @@ const releaseUrl = 'https://github.com/junwatu/indonesian-flood-explorer/release
   <!-- Views -->
   <section class="pb-20 px-6">
     <div class="max-w-6xl mx-auto">
-      <p class="font-mono text-xs text-neutral-500 uppercase tracking-widest mb-10">Visualization Modes</p>
+      <p class="font-mono text-xs text-neutral-500 uppercase tracking-widest mb-10">Mode Visualisasi</p>
       <div class="grid md:grid-cols-2 gap-px bg-neutral-200 border border-neutral-200">
         <div class="bg-white p-8">
           <div class="flex items-center gap-3 mb-4">
@@ -106,12 +106,12 @@ const releaseUrl = 'https://github.com/junwatu/indonesian-flood-explorer/release
             <h3 class="text-base font-semibold text-neutral-900">Centroid</h3>
           </div>
           <p class="text-sm text-neutral-600 leading-relaxed mb-5">
-            Flood events as sized point markers. Scales with area. Up to 1,200 concurrent markers with configurable sizing.
+            Kejadian banjir ditampilkan sebagai titik marker. Ukuran sesuai luas area. Hingga 1.200 marker sekaligus dengan ukuran yang dapat disesuaikan.
           </p>
           <div class="flex gap-2 flex-wrap">
-            <span class="font-mono text-[10px] text-neutral-500 border border-neutral-200 px-2 py-0.5">fast</span>
-            <span class="font-mono text-[10px] text-neutral-500 border border-neutral-200 px-2 py-0.5">scalable</span>
-            <span class="font-mono text-[10px] text-neutral-500 border border-neutral-200 px-2 py-0.5">configurable</span>
+            <span class="font-mono text-[10px] text-neutral-500 border border-neutral-200 px-2 py-0.5">cepat</span>
+            <span class="font-mono text-[10px] text-neutral-500 border border-neutral-200 px-2 py-0.5">skalabel</span>
+            <span class="font-mono text-[10px] text-neutral-500 border border-neutral-200 px-2 py-0.5">konfigurasi</span>
           </div>
         </div>
         <div class="bg-white p-8">
@@ -120,12 +120,12 @@ const releaseUrl = 'https://github.com/junwatu/indonesian-flood-explorer/release
             <h3 class="text-base font-semibold text-neutral-900">Polygon</h3>
           </div>
           <p class="text-sm text-neutral-600 leading-relaxed mb-5">
-            True flood boundary polygons rendered as filled shapes. Lazy-loaded on demand. Shows actual extent in km&sup2;.
+            Batas wilayah banjir sesungguhnya ditampilkan sebagai bentuk polygon. Dimuat secara lazy. Menunjukkan luas sebenarnya dalam km&sup2;.
           </p>
           <div class="flex gap-2 flex-wrap">
-            <span class="font-mono text-[10px] text-neutral-500 border border-neutral-200 px-2 py-0.5">boundaries</span>
+            <span class="font-mono text-[10px] text-neutral-500 border border-neutral-200 px-2 py-0.5">batas wilayah</span>
             <span class="font-mono text-[10px] text-neutral-500 border border-neutral-200 px-2 py-0.5">lazy-loaded</span>
-            <span class="font-mono text-[10px] text-neutral-500 border border-neutral-200 px-2 py-0.5">area</span>
+            <span class="font-mono text-[10px] text-neutral-500 border border-neutral-200 px-2 py-0.5">luas area</span>
           </div>
         </div>
       </div>
@@ -135,19 +135,19 @@ const releaseUrl = 'https://github.com/junwatu/indonesian-flood-explorer/release
   <!-- Map Modes -->
   <section class="pb-20 px-6">
     <div class="max-w-6xl mx-auto">
-      <p class="font-mono text-xs text-neutral-500 uppercase tracking-widest mb-10">Map Sources</p>
+      <p class="font-mono text-xs text-neutral-500 uppercase tracking-widest mb-10">Sumber Peta</p>
       <div class="grid md:grid-cols-3 gap-px bg-neutral-200 border border-neutral-200">
         <div class="bg-white p-6">
-          <p class="font-mono text-[10px] text-neutral-500 uppercase tracking-wider mb-3">Auto</p>
-          <p class="text-sm text-neutral-600">Starts offline, upgrades to online tiles when connected.</p>
+          <p class="font-mono text-[10px] text-neutral-500 uppercase tracking-wider mb-3">Otomatis</p>
+          <p class="text-sm text-neutral-600">Mulai offline, otomatis beralih ke peta online saat terkoneksi internet.</p>
         </div>
         <div class="bg-white p-6">
           <p class="font-mono text-[10px] text-neutral-500 uppercase tracking-wider mb-3">Online</p>
-          <p class="text-sm text-neutral-600">CartoDB Voyager @2x raster tiles with full detail.</p>
+          <p class="text-sm text-neutral-600">CartoDB Voyager @2x raster tiles dengan detail penuh.</p>
         </div>
         <div class="bg-white p-6">
           <p class="font-mono text-[10px] text-neutral-500 uppercase tracking-wider mb-3">Offline</p>
-          <p class="text-sm text-neutral-600">39 MB PMTiles. Indonesia coverage, zoom 0&ndash;10.</p>
+          <p class="text-sm text-neutral-600">39 MB PMTiles. Cakupan seluruh Indonesia, zoom 0&ndash;10.</p>
         </div>
       </div>
     </div>
@@ -159,7 +159,7 @@ const releaseUrl = 'https://github.com/junwatu/indonesian-flood-explorer/release
   <!-- Tech Stack -->
   <section class="py-20 px-6">
     <div class="max-w-6xl mx-auto">
-      <p class="font-mono text-xs text-neutral-500 uppercase tracking-widest mb-8">Stack</p>
+      <p class="font-mono text-xs text-neutral-500 uppercase tracking-widest mb-8">Teknologi</p>
       <div class="flex flex-wrap gap-3">
         {['Tauri v2', 'SvelteKit', 'DuckDB', 'MapLibre GL', 'Protomaps', 'Rust'].map((t) => (
           <span class="font-mono text-xs text-neutral-600 border border-neutral-300 px-4 py-2 hover:border-neutral-900 hover:text-neutral-900 transition-colors">
@@ -175,9 +175,9 @@ const releaseUrl = 'https://github.com/junwatu/indonesian-flood-explorer/release
     <div class="max-w-6xl mx-auto">
       <div class="border border-neutral-900 p-10 md:p-16">
         <div class="max-w-xl">
-          <h2 class="text-2xl font-bold text-neutral-900 mb-4 tracking-tight">Download</h2>
+          <h2 class="text-2xl font-bold text-neutral-900 mb-4 tracking-tight">Unduh Sekarang</h2>
           <p class="text-sm text-neutral-600 mb-8 leading-relaxed">
-            Start analyzing flood events across Indonesia. 310,000+ events, fully offline, no account required.
+            Mulai analisis kejadian banjir di seluruh Indonesia. 310.000+ kejadian, sepenuhnya offline, tanpa perlu akun.
           </p>
           <div class="flex flex-col sm:flex-row items-start gap-4">
             <a
@@ -191,7 +191,7 @@ const releaseUrl = 'https://github.com/junwatu/indonesian-flood-explorer/release
             </a>
             <span class="inline-flex items-center gap-2 text-neutral-400 px-6 py-3 text-sm font-medium border border-neutral-200 cursor-default">
               Windows
-              <span class="font-mono text-[10px]">SOON</span>
+              <span class="font-mono text-[10px]">SEGERA</span>
             </span>
           </div>
           <p class="font-mono text-[11px] text-neutral-500 mt-4">165 MB &middot; aarch64 &middot; unsigned</p>
@@ -203,8 +203,8 @@ const releaseUrl = 'https://github.com/junwatu/indonesian-flood-explorer/release
   <!-- Footer -->
   <footer class="border-t border-neutral-200 py-8 px-6">
     <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-      <span class="font-mono text-xs text-neutral-500">flood-explorer v0.1.0</span>
-      <span class="font-mono text-[10px] text-neutral-500">Data: Groundsource &middot; Map: OpenStreetMap</span>
+      <span class="font-mono text-xs text-neutral-500">penjelajah-banjir v0.1.0</span>
+      <span class="font-mono text-[10px] text-neutral-500">Data: Groundsource &middot; Peta: OpenStreetMap</span>
     </div>
   </footer>
 </Layout>
